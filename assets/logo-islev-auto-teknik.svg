@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 190" role="img" aria-labelledby="title desc">
+  <title id="title">Islev Auto Teknik</title>
+  <desc id="desc">Islev Auto Teknik logo med blåt teknisk mærke, integreret skruenøgle og hvid wordmark.</desc>
+  <defs>
+    <linearGradient id="blue" x1="30" y1="160" x2="166" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b559c"/>
+      <stop offset="0.48" stop-color="#2787e4"/>
+      <stop offset="1" stop-color="#8ed6ff"/>
+    </linearGradient>
+    <linearGradient id="blue-soft" x1="55" y1="142" x2="144" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#153a63"/>
+      <stop offset="1" stop-color="#7dc9ff"/>
+    </linearGradient>
+    <linearGradient id="word" x1="224" y1="50" x2="720" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.62" stop-color="#f5f8fb"/>
+      <stop offset="1" stop-color="#cbd6e1"/>
+    </linearGradient>
+    <filter id="glow" x="-24%" y="-24%" width="148%" height="148%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#06101d" flood-opacity="0.55"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="3.5" flood-color="#2f8ee9" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#glow)">
+    <g transform="translate(22 16)">
+      <circle cx="78" cy="78" r="62" fill="none" stroke="url(#blue)" stroke-width="17" stroke-dasharray="34 12" stroke-linecap="butt" transform="rotate(-12 78 78)"/>
+      <circle cx="78" cy="78" r="42" fill="none" stroke="url(#blue-soft)" stroke-width="8.5" opacity="0.9"/>
+      <circle cx="78" cy="78" r="23" fill="#07111f" opacity="0.92"/>
+
+      <path d="M134 23c-11-5-25-3-34 7-10 10-12 25-6 37l-63 63c-8 8-8 21 0 29s21 8 29 0l63-63c12 6 27 4 37-6 10-10 13-24 7-35l-22 22-22-22 22-22c-3-4-7-7-11-10Z" fill="#07111f" opacity="0.95"/>
+      <path d="M131 27c-9-4-20-2-28 6-9 9-10 22-4 32l-63 63c-6 6-6 16 0 22s16 6 22 0l63-63c10 6 23 5 32-4 8-8 10-19 6-28l-18 18-27-27 18-18c0-1-1-1-1-1Z" fill="url(#blue)"/>
+      <circle cx="47" cy="139" r="7" fill="#d9efff" opacity="0.88"/>
+
+      <path d="M54 78h48" fill="none" stroke="#d9efff" stroke-width="5" stroke-linecap="round" opacity="0.7" transform="rotate(-45 78 78)"/>
+      <path d="M78 53v50" fill="none" stroke="#d9efff" stroke-width="5" stroke-linecap="round" opacity="0.7" transform="rotate(-45 78 78)"/>
+    </g>
+  </g>
+
+  <g>
+    <text x="224" y="87" fill="url(#word)" font-family="Inter, Arial, Helvetica, sans-serif" font-size="53" font-weight="900" letter-spacing="3">ISLEV AUTO</text>
+    <text x="226" y="137" fill="#a8dbff" font-family="Inter, Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="11">TEKNIK</text>
+    <path d="M226 151h138" stroke="#2f8ee9" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+  </g>
+</svg>
