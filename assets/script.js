@@ -3,6 +3,8 @@ const menuToggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
 const navLinks = [...document.querySelectorAll("[data-nav] a")];
 const parallaxItems = [...document.querySelectorAll("[data-parallax] img")];
+const serviceEditorial = document.querySelector(".service-editorial");
+const serviceRows = [...document.querySelectorAll(".service-row")];
 
 const scrollToHash = (hash, behavior = "smooth") => {
   if (!hash || hash === "#") return;
@@ -115,10 +117,13 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && parallaxIt
 
   const updateParallax = () => {
     const viewportHeight = window.innerHeight || 1;
+    const isCompact = window.matchMedia("(max-width: 760px)").matches;
+    const movement = isCompact ? 10 : 24;
+
     parallaxItems.forEach((image) => {
       const rect = image.parentElement.getBoundingClientRect();
       if (rect.bottom < 0 || rect.top > viewportHeight) return;
-      const progress = (rect.top / viewportHeight) * -22;
+      const progress = (rect.top / viewportHeight) * -movement;
       image.style.translate = `0 ${progress.toFixed(2)}px`;
     });
     ticking = false;
@@ -136,4 +141,16 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && parallaxIt
   );
 
   updateParallax();
+}
+
+if (serviceEditorial && serviceRows.length) {
+  serviceRows.forEach((row) => {
+    row.addEventListener("pointerenter", () => {
+      serviceEditorial.classList.add("is-service-hovered");
+    });
+
+    row.addEventListener("pointerleave", () => {
+      serviceEditorial.classList.remove("is-service-hovered");
+    });
+  });
 }
